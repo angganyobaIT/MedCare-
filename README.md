@@ -1,59 +1,105 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🏥 MedCare+  
+### Human-Centered Caregiving Platform
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**MedCare+** adalah platform caregiving berbasis digital yang dirancang untuk menghadirkan **layanan perawatan yang aman, terstruktur, dan berorientasi pada manusia**.  
+Aplikasi ini mempertemukan **customer** yang membutuhkan layanan perawatan dengan **caregiver terverifikasi**, serta didukung oleh peran **admin** sebagai pengawas sistem untuk menjaga kualitas dan kepercayaan layanan.
 
-## About Laravel
+MedCare+ tidak hanya memfasilitasi pencarian caregiver, tetapi juga membangun **ekosistem caregiving yang transparan, profesional, dan bertanggung jawab**.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🎯 Tujuan Aplikasi
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+MedCare+ dikembangkan dengan tujuan untuk:
 
-## Learning Laravel
+- Mempermudah customer dalam menemukan caregiver sesuai kebutuhan
+- Memberikan kesempatan kerja yang adil dan terkontrol bagi caregiver
+- Menjamin keamanan layanan melalui proses verifikasi dan pengawasan admin
+- Meningkatkan kualitas perawatan melalui sistem rating dan laporan
+- Menciptakan sistem caregiving yang terintegrasi dan transparan
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 👥 Role Pengguna
 
-## Laravel Sponsors
+MedCare+ memiliki tiga peran utama dengan fungsi dan tanggung jawab yang jelas:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- **Admin**  
+  Bertindak sebagai pengelola dan pengawas sistem
 
-### Premium Partners
+- **Customer**  
+  Pengguna yang membutuhkan layanan caregiver
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+- **Caregiver**  
+  Penyedia layanan perawatan yang terverifikasi
 
-## Contributing
+Setiap role memiliki hak akses dan fitur yang disesuaikan dengan perannya masing-masing.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 🛠️ Fitur Berdasarkan Role
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 🔐 Admin
+Admin berperan penting dalam menjaga kualitas, keamanan, dan keteraturan platform.
 
-## Security Vulnerabilities
+**Fitur Admin:**
+- Melihat seluruh postingan customer beserta tanggal dan waktu
+- Menghapus postingan customer yang tidak sesuai
+- Melihat kota atau domisili caregiver
+- Melihat identitas caregiver
+- Melakukan persetujuan (ACC) caregiver
+- Memberhentikan caregiver
+- Memberikan peringatan kepada caregiver
+- Menerima laporan dari customer
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+### 👤 Customer
+Customer adalah pihak yang menggunakan layanan caregiver melalui aplikasi.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+**Fitur Customer:**
+- Membuat postingan kebutuhan perawatan
+- Mencari caregiver terdekat
+- Melakukan pembayaran
+- Menghapus postingan
+- Memilih kategori caregiver:
+  - Perawat  
+  - Pendamping  
+  - Pembantu
+- Melihat caregiver yang tertarik pada postingan
+- Memberikan rating kepada caregiver
+- Melaporkan caregiver jika terjadi masalah
+
+---
+
+### 🧑‍⚕️ Caregiver
+Caregiver merupakan penyedia layanan perawatan yang bekerja melalui MedCare+.
+
+**Fitur Caregiver:**
+- Mengunggah identitas diri untuk proses verifikasi
+- Melihat daftar pekerjaan yang tersedia
+- Menerima pembayaran
+- Melakukan komunikasi (chat) dengan customer
+
+---
+
+## 🔄 Alur Penggunaan Aplikasi
+
+1. Customer membuat postingan kebutuhan perawatan  
+2. Caregiver melihat pekerjaan yang tersedia dan menyatakan ketertarikan  
+3. Customer memilih caregiver yang sesuai  
+4. Customer melakukan pembayaran melalui aplikasi  
+5. Caregiver menjalankan pekerjaan  
+6. Customer memberikan rating atau laporan  
+7. Admin memantau dan menindaklanjuti aktivitas sistem  
+
+---
+
+## 🔒 Keamanan dan Kepercayaan
+
+MedCare+ dibangun dengan fokus pada aspek kepercayaan dan keamanan melalui:
+
+- Verifikasi identitas caregiver
+- Sistem laporan dan peringatan
+- Pengawasan penuh oleh admin
+- Transparansi interaksi antara customer dan caregiver
