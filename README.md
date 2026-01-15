@@ -13,16 +13,15 @@ MedCare+ tidak hanya memfasilitasi pencarian caregiver, tetapi juga membangun **
 MedCare+ dikembangkan dengan tujuan untuk:
 
 - Mempermudah customer dalam menemukan caregiver sesuai kebutuhan
-- Memberikan kesempatan kerja yang adil dan terkontrol bagi caregiver
+- Memberikan kesempatan dan memperluas jangkauan kerja bagi caregiver
 - Menjamin keamanan layanan melalui proses verifikasi dan pengawasan admin
 - Meningkatkan kualitas perawatan melalui sistem rating dan laporan
-- Menciptakan sistem caregiving yang terintegrasi dan transparan
 
 ---
 
 ## 👥 Role Pengguna
 
-MedCare+ memiliki tiga peran utama dengan fungsi dan tanggung jawab yang jelas:
+MedCare+ memiliki tiga peran utama:
 
 - **Admin**  
   Bertindak sebagai pengelola dan pengawas sistem
@@ -31,7 +30,7 @@ MedCare+ memiliki tiga peran utama dengan fungsi dan tanggung jawab yang jelas:
   Pengguna yang membutuhkan layanan caregiver
 
 - **Caregiver**  
-  Penyedia layanan perawatan yang terverifikasi
+  Bertindak sebagai caregiving yang bersedia memberikan jasanya untuk memenuhi kebutuhan customer
 
 Setiap role memiliki hak akses dan fitur yang disesuaikan dengan perannya masing-masing.
 
@@ -58,10 +57,9 @@ Admin berperan penting dalam menjaga kualitas, keamanan, dan keteraturan platfor
 Customer adalah pihak yang menggunakan layanan caregiver melalui aplikasi.
 
 **Fitur Customer:**
-- Membuat postingan kebutuhan perawatan
+- Membuat dan menghapus postingan kebutuhan jasa
 - Mencari caregiver terdekat
 - Melakukan pembayaran
-- Menghapus postingan
 - Memilih kategori caregiver:
   - Perawat  
   - Pendamping  
@@ -80,6 +78,7 @@ Caregiver merupakan penyedia layanan perawatan yang bekerja melalui MedCare+.
 - Melihat daftar pekerjaan yang tersedia
 - Menerima pembayaran
 - Melakukan komunikasi (chat) dengan customer
+- Menggunakan tools-tools yang disediakan seperti reminder dan laporan jika menemui suatu masalah
 
 ---
 
