@@ -11,7 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('job', function(Blueprint $table){
+            $table->id('job_id');
+            $table->string('title');
+            $table->string('picture');
+            $table->integer('salary');
+            $table->text('description');
+            $table->string('status')->default('show');
+            $table->integer('review_rating')->default(0);
+            $table->timestamps();
+        });
     }
 
     /**

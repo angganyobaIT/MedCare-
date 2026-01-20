@@ -11,7 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('caregiver_categories', function(Blueprint $table){
+            $table->id('caregiver_category_id');
+            $table->string('category');
+            $table->timestamps();
+
+        });
     }
 
     /**

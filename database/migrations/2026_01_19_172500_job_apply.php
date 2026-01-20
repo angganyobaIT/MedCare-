@@ -11,7 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('job_applied', function(Blueprint $table){
+            $table->id('applied_id');
+            $table->string('applied_status')->default('available');
+            $table->timestamps();
+
+        });
     }
 
     /**

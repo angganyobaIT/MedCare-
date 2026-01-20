@@ -6,9 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('accounts', function (Blueprint $table) {
@@ -21,7 +18,6 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->timestamps();
             $table->string('account_status')->default('active');
-
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
@@ -40,12 +36,9 @@ return new class extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('accounts');
         Schema::dropIfExists('password_reset_tokens');
         Schema::dropIfExists('sessions');
     }

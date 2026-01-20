@@ -11,7 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('caregiver', function(Blueprint $table){
+            $table->id('caregiver_id');
+            $table->string('name');
+            $table->text('address');
+            $table->string('photo');
+            $table->boolean('is_verified')->default(false);
+            $table->string('status')->default('ready');
+            $table->timestamps();
+        });
     }
 
     /**

@@ -11,7 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('payment_categories', function(Blueprint $table){
+            $table->id('payment_category_id');
+            $table->string('category');
+            $table->timestamps();
+        });
     }
 
     /**

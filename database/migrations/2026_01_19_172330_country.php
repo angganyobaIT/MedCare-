@@ -11,7 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('countries', function(Blueprint $table){
+            $table->id('country_id');
+            $table->string('country_name');
+            $table->timestamps();
+
+        });
     }
 
     /**
