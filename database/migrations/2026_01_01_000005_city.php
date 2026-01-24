@@ -11,10 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('provinces', function(Blueprint $table){
-            $table->id('province_id');
-            $table->string('province_name');
+        Schema::create('cities', function(Blueprint $table){
+            $table->id('city_id');
+            $table->string('city_name');
             $table->timestamps();
+            $table->foreignId('province_id')->constrained('provinces', 'province_id'); 
 
         });
     }
