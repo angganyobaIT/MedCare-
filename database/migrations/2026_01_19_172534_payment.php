@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id('payment_id');
             $table->timestamps();
             $table->string('payment_status')->default('none');
+            $table->foreignId('category_id')->constrained('payment_categories', 'payment_category_id');
+            $table->foreignId('job_id')->constrained('job', 'job_id');
         });
     }
 
