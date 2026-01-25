@@ -11,15 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('job', function(Blueprint $table){
-            $table->id('job_id');
-            $table->string('title');
-            $table->string('picture');
-            $table->integer('salary');
-            $table->text('description');
-            $table->string('status')->default('show');
-            $table->integer('review_rating')->default(0);
+        Schema::create('job_applied', function(Blueprint $table){
+            $table->id('applied_id');
+            $table->string('applied_status')->default('available');
             $table->timestamps();
+            $table->foreignId('caregiver_id')->constrained('caregiver', 'caregiver_id');
+            $table->foreignId('job_id')->constrained('job', 'job_id');
         });
     }
 
