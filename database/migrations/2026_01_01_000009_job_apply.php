@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id('applied_id');
             $table->string('applied_status')->default('available');
             $table->timestamps();
-
+            $table->foreignId('caregiver_id')->constrained('caregiver', 'caregiver_id');
         });
     }
 

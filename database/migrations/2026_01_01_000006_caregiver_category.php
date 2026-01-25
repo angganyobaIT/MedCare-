@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id('caregiver_category_id');
             $table->string('category');
             $table->timestamps();
-
         });
     }
 

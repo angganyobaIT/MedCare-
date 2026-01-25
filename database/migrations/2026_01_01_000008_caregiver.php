@@ -19,6 +19,9 @@ return new class extends Migration
             $table->boolean('is_verified')->default(false);
             $table->string('status')->default('ready');
             $table->timestamps();
+            $table->foreignId('account_id')->constrained('accounts', 'account_id');
+            $table->foreignId('category_id')->constrained('caregiver_categories', 'caregiver_category_id');
+            $table->foreignId('education_id')->constrained('education', 'education_id');
         });
     }
 
