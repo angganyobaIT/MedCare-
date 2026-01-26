@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class caregiver_category extends Model
 {
-    public function caregiver_category(){
-        
+    public function caregiver():HasMany{
+        return $this->hasMany(caregiver::class, );
     }
 }
