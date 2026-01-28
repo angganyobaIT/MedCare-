@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo; 
+use Illuminate\Database\Eloquent\Relations\HasMany; 
+
 
 class Caregiver extends Model
 {
@@ -29,4 +31,10 @@ class Caregiver extends Model
     public function education(): BelongsTo {
         return $this->belongsTo(Education::class, 'education_id', 'education_id');
     }
+
+    public function job_applies(): HasMany {
+        return $this->hasMany(JobApply::class, 'applied_id', 'caregiver_id');
+    }
+
+
 }
