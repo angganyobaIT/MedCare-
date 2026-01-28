@@ -3,27 +3,30 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsTo; 
 
 class Caregiver extends Model
 {
-    public function accounts():BelongsTo{
-        return $this->belongsTo(account::class, 'account_id', 'account_id');
+    protected $table = 'caregiver'; 
+    protected $primaryKey = 'caregiver_id';
+    protected $fillable = [
+        'name', 'address', 'photo', 'is_verified', 'status',
+        'account_id', 'city_id', 'category_id', 'education_id'
+    ];
+
+    public function account(): BelongsTo {
+        return $this->belongsTo(Account::class, 'account_id', 'account_id');
     }
 
-    public function cities():BelongsTo{
+    public function city(): BelongsTo {
         return $this->belongsTo(City::class, 'city_id', 'city_id');
     }
 
-    public function categories():BelongsTo{
+    public function category(): BelongsTo {
         return $this->belongsTo(CaregiverCategory::class, 'category_id', 'caregiver_category_id');
     }
 
-    public function educations():BelongsTo{
+    public function education(): BelongsTo {
         return $this->belongsTo(Education::class, 'education_id', 'education_id');
     }
-
-    
-
-    
 }
