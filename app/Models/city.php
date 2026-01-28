@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+
 
 class City extends Model
 {
@@ -13,4 +15,8 @@ class City extends Model
     public function province():BelongsTo{
         return $this->belongsTo(Province::class, 'province_id', 'province_id');
     }
+
+    public function caregiver():HasMany{
+        return $this->hasMany(Caregiver::class, 'caregiver_id', 'caregiver_id');
+    } 
 }
