@@ -9,14 +9,16 @@ use Illuminate\Database\Eloquent\HasMany;
 
 class Job extends Model
 {
-    protected $fillable=['title', 'picture', 'salary', 'description', 'status', 'review_rating'];
+    protected $fillable=['title', 'picture', 'salary', 'description', 'status', 'review_rating', 'account_id', 'city_id', 'category_id'];
+
+    protected $table = 'job';
 
     public function account():BelongsTo{
         return $this->belongsTo(Account::class, 'account_id', 'account_id');
     }
 
     public function city():BelongsTo{
-        return $this->belongsTo(Account::class, 'city_id', 'city_id');
+        return $this->belongsTo(City::class, 'city_id', 'city_id');
     }
 
     public function job_category():BelongsTo{
