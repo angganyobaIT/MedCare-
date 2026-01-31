@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Payment extends Model
 {
-    protected $fillable=['payment_status'];
+    protected $fillable=['payment_status', 'category_id'];
 
-    public function payment_category():BelongsTo{
-        return $this->hasMany(PaymentCategory::class, 'category_id', 'payment_category_id');
+    public function job():BelongsTo{
+        return $this->belongsTo(Job::class, 'job_id', 'payment_id');
     }
 }

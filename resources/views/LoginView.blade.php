@@ -7,12 +7,12 @@
     <title>MedCare+</title>
 </head>
 <body>
-    <form action="">
-        <h1>Welcome Back</h1>
-        <form action="/loginproccess" method="POST" autocomplete="off">
-            <input type="text" placeholder="Username" required >
-            <input type="password" placeholder="Password" required autocomplete="new-password">
-        </form>
+    <h1>Welcome Back</h1>
+    <form action="/loginproccess" method="POST" autocomplete="off">
+        @csrf
+        <input type="text" placeholder="Username" required >
+        <input type="password" placeholder="Password" required autocomplete="new-password">
     </form>
+    <a href="{{url('/')}}">Register</a>
 </body>
 </html>

@@ -26,6 +26,10 @@ class Job extends Model
     }
 
     public function job_applies():HasMany{
-        return $this->HasMany(JobApply::class, 'job_id', 'job_id');
+        return $this->hasMany(JobApply::class, 'job_id', 'job_id');
+    }
+
+    public function payments():HasMany{
+        return $this->hasMany(Payment::class, );
     }
 }
