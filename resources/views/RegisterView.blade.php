@@ -11,10 +11,11 @@
         Create Account
     </h1>
     <form action="register/proccess" method="POST">
-        <input type="text" placeholder="Username" required >
-        <input type="email" placeholder="Email" required >
-        <input type="password" placeholder="Password" required autocomplete="new-password">
-        <input type="password" placeholder="Confirm Password" required autocomplete="new-password">
+        @csrf
+        <input type="text" name='username' placeholder="Username" required >
+        <input type="email" name='email' placeholder="Email" required >
+        <input type="password" name='password' placeholder="Password" required autocomplete="new-password">
+        <input type="password" name='confirm_password' placeholder="Confirm Password" required autocomplete="new-password">
         <button type="submit">Register</button>   
     </form>
     <a href="{{url('login')}}">Sudah Punya Akun?</a>
