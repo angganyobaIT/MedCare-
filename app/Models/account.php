@@ -21,12 +21,12 @@ class Account extends Authenticatable
         'email',
         'telephone',
         'password',
-        'account_status'
     ];
 
     protected $hidden = [
         'password',
         'remember_token',
+        'account_status',
     ];
 
     protected function casts(): array
