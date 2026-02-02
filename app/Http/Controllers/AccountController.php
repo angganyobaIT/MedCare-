@@ -18,6 +18,7 @@ class AccountController extends Controller
         return view ('LoginView');
     }
 
+    // LOGIC REGISTER
     public function register_validate(Request $request) {
         $request->validate([
             'username_reg' => 'required|unique:accounts,username',
@@ -40,5 +41,34 @@ class AccountController extends Controller
 
         // Jangan lupa beri feedback setelah simpan!
         return redirect('/login')->with('success', 'Registrasi Berhasil!');
+    }
+
+    // LOGIC LOGIN 
+    public function login_validate(Request $request) {
+        // 1. Validasi Input
+        $credentials = $request->validate([
+            'username_log' => 'required',
+            'password_log' => 'required',
+        ]);
+
+        // 2. Mapping data agar sesuai dengan nama kolom di database
+        $datalog = [
+            'username' => $request->username_log,
+            'password' => $request->password_log,
+        ];
+
+        // 3. Proses Attempt Login
+        if (Auth::attempt($datalog)) { 
+            // 4. Regenerate session jika sukses
+            $request->session()->regenerate();
+
+            return redirect()->intended('DashboardUser'); 
+            // intended() akan membawa user ke halaman yang tadinya ingin mereka buka
+        } 
+
+        // 5. Jika gagal, balikkan dengan pesan error
+        return back()->withErrors([
+            'login_error' => 'Username atau Password salah.',
+        ])->onlyInput('username_log'); // Agar user tidak perlu ketik ulang username
     }
 }

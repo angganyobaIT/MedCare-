@@ -3,16 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>MedCare+</title>
+    <title>MedCare+ | Login</title>
 </head>
 <body>
     <h1>Welcome Back</h1>
-    <form action="/loginproccess" method="POST" autocomplete="off">
+
+    @if ($errors->any())
+        <div style="color: red;">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+    @if (session('error'))
+        <div style="color: orange; font-weight: bold;">
+            {{ session('error') }}
+        </div>
+    @endif
+
+    <form action="{{ url('/login/proccess') }}" method="POST" autocomplete="off">
         @csrf
-        <input type="text" placeholder="Username" required >
-        <input type="password" placeholder="Password" required autocomplete="new-password">
+        <input type="text" name='username_log' value='{{ old('username_log') }}' placeholder="Username" required>
+        
+        <input type="password" name='password_log' placeholder="Password" required autocomplete="current-password">
+        
+        <button type='submit'>Login</button>
     </form>
-    <a href="{{url('/')}}">Register</a>
+
+    <a href="{{ url('/') }}">Belum punya akun? Register</a>
 </body>
 </html>
