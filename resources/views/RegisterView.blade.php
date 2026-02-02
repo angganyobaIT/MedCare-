@@ -27,7 +27,7 @@
         <br>
         <input type="text" name='telephone_reg' value="{{ old('telephone_reg') }}" placeholder="Telephone" required>
         <br>
-        <input type="password" name='password_reg' placeholder="Password" required>
+        <input type="password" name='password_reg' value='{{old('password_reg')}}' placeholder="Password" required>
         <br>
         <input type="password" name='password_confirm_reg' placeholder="Confirm Password" required>
         <br>
