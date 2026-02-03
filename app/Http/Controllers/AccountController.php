@@ -46,7 +46,7 @@ class AccountController extends Controller
     // LOGIC LOGIN 
     public function login_validate(Request $request) {
         // 1. Validasi Input
-        $credentials = $request->validate([
+        $request->validate([
             'username_log' => 'required',
             'password_log' => 'required',
         ]);
@@ -62,7 +62,7 @@ class AccountController extends Controller
             // 4. Regenerate session jika sukses
             $request->session()->regenerate();
 
-            return redirect()->intended('DashboardUser'); 
+            return redirect()->route('dashboard');
             // intended() akan membawa user ke halaman yang tadinya ingin mereka buka
         } 
 
